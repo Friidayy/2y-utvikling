@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="field"></table>
+    <script>
+      const field = [
+        [0, 0, 1, 0],
+        [0, 1, 1, 0],
+        [0, 0, 0, 0],
+        [1, 0, 0, 0]
+      ];
+
+      const table = document.getElementById("field");
+      for (let i = 0; i < field.length; i++) {
+        const row = table.insertRow();
+        for (let j = 0; j < field[i].length; j++) {
+          const cell = row.insertCell();
+          cell.addEventListener("click", () => {
+            if (field[i][j] === 1) {
+              cell.textContent = "X";
+            } else {
+              cell.textContent = "O";
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

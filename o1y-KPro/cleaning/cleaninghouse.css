@@ -1,0 +1,152 @@
+/* reset standard state */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.main{
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  background-position: center;
+  background-size: cover;
+  height: 109vh;
+}
+
+
+/* margin: 100px 200px; = 100px felles for topp og bunn + 200px felles for høyre og venstre
+ legger luft/plass rundt elementet/teksten, avstanden utover fra kantene av div */
+ 
+/* padding: 20px 40px; = 20px over og under, + 40px på venstre og høyre side
+ avstanden innover fra kantene av div */
+
+.navbar{
+  width: 1000px;
+  height: 75px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon{
+  width: 1100px;
+  height: 70px;
+  margin-left: -100px;
+}
+
+.logo{
+  color: #6ffb33;
+  font-size: 35px;
+  font-family: "Arial bold", cursive;
+  padding-top: 20px;
+}
+
+.form-label {
+  font-family: "Arial bold", cursive;
+  color: #6ffb33;
+  padding-top: px;
+  margin-left: 50px
+}
+
+/* select task&user and submit placement */
+.form-container {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin-left: 32px;
+  margin-top: 25px;
+}
+
+.form-item {
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  margin-left: 0px;
+}
+
+.menu{
+  width: 500px;
+  height: 70px;
+  white-space: nowrap;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* link size/place */
+ul li{
+  list-style: none;
+  margin-left: 50px;
+  margin-top: 27px;
+  font-size: 20px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: white;
+  font-family: "Arial bold", cursive;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+/* green hover */
+ul li a:hover{
+  color: #6ffb33;
+}
+
+/* select task&user */
+label {
+  font-family: "Arial bold", cursive;
+  color: #6ffb33;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* -choose option- box */
+select {
+  background-color:#ffffff;
+  color:rgb(0, 0, 0);
+  padding: 8px 12px;
+  border: 1px solid #6ffb33;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: "Arial bold", cursive;
+}
+
+/* inside -choose option- box */
+option {
+  background-color: #6ffb33;
+  font-family: "Arial bold", cursive;
+}
+
+/* submit button */
+input[type="submit"] {
+  background-color: #6ffb33;
+  color: black;
+  font-family: "Arial bold", cursive;
+  border: 1px solid #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+input:hover{
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid #ffffff;
+  border-radius: 0.3rem;
+  font-family: "Arial bold", cursive;
+  background-color: #000000;
+  color: #6ffb33;
+  padding: 3px 8px;
+  height: 20px;
+  margin-left: 400px;
+}

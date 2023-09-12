@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Calculator</title>
+    <link rel="stylesheet" type="text/css" href="hXj-math.css">
+  </head>
+  <body>
+
+    <div class="calculator">
+      <input type="text" id="result" readonly>
+      <table>
+        <tr>
+          <td><button onclick="clearResult()">C</button></td>
+          <td><button onclick="deleteDigit()"><</button></td>
+          <td><button onclick="insertOperator('/')">/</button></td>
+          <td><button onclick="insertOperator('*')">*</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="insertDigit(7)">7</button></td>
+          <td><button onclick="insertDigit(8)">8</button></td>
+          <td><button onclick="insertDigit(9)">9</button></td>
+          <td><button onclick="insertOperator('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="insertDigit(4)">4</button></td>
+          <td><button onclick="insertDigit(5)">5</button></td>
+          <td><button onclick="insertDigit(6)">6</button></td>
+          <td><button onclick="insertOperator('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button onclick="insertDigit(1)">1</button></td>
+          <td><button onclick="insertDigit(2)">2</button></td>
+          <td><button onclick="insertDigit(3)">3</button></td>
+          <td rowspan="2"><button onclick="calculate()">=</button></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button onclick="insertDigit(0)">0</button></td>
+          <td><button onclick="insertDecimal()">.</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="hXj-math.js"></script>
+  </body>
+</html>

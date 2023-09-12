@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.main{
+    width: 100%;
+    background-color: hwb(175 58% 14%);
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}
+
+.content h1{
+    font-family: cursive;
+    font-size: 40px;
+    padding-left: 10px;
+    margin-top: 0px;
+    letter-spacing: 1px;
+    color: rgba(19, 19, 78, 0.838);
+}
+
+.game{
+    font-family: cursive;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 15px;
+    letter-spacing: 0px;
+    color: rgba(19, 19, 78, 0.838);
+}
+
+.game input{
+    font-family: cursive;
+    font-size: 15px;
+    margin-top: 15px;
+    letter-spacing: 0px;
+    color: rgba(19, 19, 78, 0.838);
+}
+
+.game button{
+    font-family: cursive;
+    font-size: 15px;
+    margin-top: 15px;
+    margin-left: -6px;
+    letter-spacing: 0px;
+    color: rgba(19, 19, 78, 0.838);
+}

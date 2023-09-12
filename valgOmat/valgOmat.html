@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="valgOmat.css" id="main-styles">
+  <link rel="stylesheet" href="valgOmat-AltCss.css" id="alternate-styles" disabled>
+  <title>Valgomat</title>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Creepster' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Gluten&family=Indie+Flower&display=swap" rel="stylesheet">
+
+<body>
+<div class="main">
+<div class="navbar">
+
+  <h1>!!! Valgomat !!!</h1>
+  <form id="start-form">
+    <p>Vil du ta valgomaten?</p>
+    <button id="btnStart" type="button">Start</button>
+  </form>
+
+  <form id="quiz-form" style="display: none;">
+    <h2 id="question"></h2>
+    <input type="radio" name="answer" value="enig"> Enig
+    <input type="radio" name="answer" value="littenig"> Litt enig
+    <input type="radio" name="answer" value="littuenig"> Litt uenig
+    <input type="radio" name="answer" value="uenig"> Uenig
+
+    <button id="btnNext" type="button">Neste</button>
+    <button id="btnFindparty" type="button">Finn parti</button>
+    <button id="btnRestart" type="button">Restart</button>
+  </form>
+  <h2>Ditt resultat:</h2>
+  <p id="result"></p>
+
+  <button id="btnCssToggle" type="button">Alt Css</button>
+
+  <script src="valgOmat.js"></script>
+</body>
+</html>

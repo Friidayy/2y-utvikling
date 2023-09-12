@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database</title>
+    <link rel="stylesheet" href="cleaninghouse.css">
+      <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+</head>
+    <link href='https://fonts.googleapis.com/css?family=Creepster' rel='stylesheet'>
+<body>
+
+
+
+  <div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo"><em>Cleaning house</em></h2>
+        </div>
+        <div class="menu">
+          <ul>
+              <li><a href="cleaning-TASKS.html"><em>add tasks</em></a></li>
+              <li><a href="cleaning-REWARDS.html"><em>rewards</em></a></li>
+              <li><a href="testsubjectX3.html"><em>home</em></a></li>
+              <li><a href="cleaning-USER.html"><em>user</em></a></li>
+              <li><a href=""><em>log in</em></a></li>
+
+          </ul>
+      </div>
+    </div>
+
+
+<div class="form-container">
+  <div class="form-item">
+    <form>
+      <div class="form-group">
+      <label for="task"><em>select task:</em></label>
+      <select id="dropdown">
+        <option value="">-choose option-</option>
+      </select>
+    </div>
+
+      <div class="form-group">
+      <label for="user"><em>select user:</em></label>
+      <select id="userdropdown">
+        <option value="">-choose option-</option>
+      </select>
+    </div>
+
+      <input type="submit" value="submit">
+    </form>
+    <table id="submissionTable">
+      <thead>
+        <tr>
+          <th><em>date</em></th>
+          <th><em>user</em></th>
+          <th><em>task</em></th>
+          <th><em>points</em></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+    </div>
+
+
+
+
+    
+<script src="cleaninghouse.js"></script>  
+
+</body>
+</html>

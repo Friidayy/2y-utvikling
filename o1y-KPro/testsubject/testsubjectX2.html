@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password=ratratye</title>
+</head>
+<body>
+
+    <div id="login-box">
+        <div class="left">
+            <h1>Sign up</h1>
+            <input type="text" id="username" name="username" placeholder="username" />
+            <input type="text" id="email" name="email" placeholder="E-mail" />
+            <input type="password" id="password" name="password" placeholder="Password" />
+
+            <input type="submit" id="sighUp" name="signup_submit" value="Sign up" />
+        </div>
+
+        <div class="right">
+            <span class="loginWith">Sign in with<br />social network</span>
+
+            <button class="social-signin google">Log in with Google</button>
+        </div>
+        <div class="or">OR</div>
+    </div>
+</body>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyB3rifanns61gnWsacBQGV0ICU0VfMarM0",
+          authDomain: "testsubjectx2-78311.firebaseapp.com",
+          databaseURL: "https://testsubjectx2-78311-default-rtdb.firebaseio.com",
+          projectId: "testsubjectx2-78311",
+          storageBucket: "testsubjectx2-78311.appspot.com",
+          messagingSenderId: "1079539060819",
+          appId: "1:1079539060819:web:2daa113852992c9c8176a6"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+    sighUp.addEventListener('click',(e) => {
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var username = document.getElementById('username').value;
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+
+                set(ref(database, 'users/' + user.uid),{
+                    username: username,
+                    email: email
+                })
+
+                alert('user created');
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert('errorMessage');
+                // ..
+            });
+
+
+    });
+    </script>
+      
+</html>
+
+
